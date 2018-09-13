@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %} - Predict{% endblock %}
+
+{% block content %}
+
+{% if filename %}
+<div class="row show-grid">
+
+  <div class="span3">
+    <h3>Original</h3>
+    <p><a href="{{filename}}"><img src="{{filename}}" width="35%"></a></p>
+    <p>{{pretext}}</p>
+    <p>{{cap1}}<br>{{cap2}}<br>{{cap3}}</p>
+  </div>
+
+</div>
+
+<hr />
+
+<h4><a href="/">&laquo; Return home</a> to process another image.</h4>
+
+{% else %}
+<h2>sorry, image upload failed. wrong format?</h2>
+{% endif %}
+
+{% endblock %}
